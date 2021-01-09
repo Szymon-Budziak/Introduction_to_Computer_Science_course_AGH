@@ -1,6 +1,3 @@
-from random import randint
-
-
 def column_summary(array, row, col):
     result = 0
     for i in range(len(array)):
@@ -23,7 +20,7 @@ def two_rooks(array):
     for i in range(len(array)):
         for j in range(len(array)):
             for k in range(i, len(array)):
-                for m in range(j, len(array)):
+                for m in range(len(array)):
                     if i != k and j != m:
                         result = column_summary(array, i, j) \
                             + column_summary(array, k, m) \
@@ -38,6 +35,5 @@ def two_rooks(array):
     return (tower_1[0], tower_1[1], tower_2[0], tower_2[1])
 
 
-N = 5
-array = [[randint(1, 10) for _ in range(N)] for _ in range(N)]
+array = [[1, 1, 2, 3], [-1, 3, -1, 4], [4, 1, 5, 4], [5, 0, 3, 6]]
 print(two_rooks(array))
