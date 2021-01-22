@@ -8,42 +8,46 @@ def base_convert(number):
     a = ""
     hex = "0123456789ABCDEF"
     while number > 0:
-        a = hex[number % 3] + a
-        number = number // 3
+        a = hex[number % 8] + a
+        number = number // 8
     return int(a)
 
 
 def count_digits(number):
-    one_count = 0
-    two_count = 0
+    five_count = 0
     while number != 0:
         c = number % 10
         number //= 10
-        if c == 1:
-            one_count += 1
-        if c == 2:
-            two_count += 1
-    return one_count, two_count
+        if c == 5:
+            five_count += 1
+    if five_count % 2 == 0:
+        return True
+    return False
 
 
-def remove_key_elements(first):
+def relocate_to_the_beginning(first):
     p = None
     q = first
     if first is None:
         return None
     converted_p = base_convert(q.value)
+    flag = True
     while q is not None:
-        digits = count_digits(converted_p)
-        if digits[0] > digits[1]:
-            p = q.next
-            if p is None:
-                break
+        if count_digits(converted_p):
+            r = p
+            if flag:
+                r = q
+            p = q
             q = p.next
+            r.next = first
+            first = r
         else:
             p = q
             q = p.next
         converted_p = base_convert(p.value)
+        flag = False
     if p is not None:
-        digits = count_digits(converted_p)
-        if digits[0] > digits[1]:
-            p.next = None
+        if count_digits(converted_p):
+            r = p
+            r.next = first
+            first = r
