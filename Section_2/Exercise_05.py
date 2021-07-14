@@ -8,8 +8,8 @@ Np. dla 2315 będą to 21, 35, 231, 315.
 def length(number):
     count = 0
     while number > 0:
-        number //= 10
         count += 1
+        number //= 10
     return count
 
 

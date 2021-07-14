@@ -1,3 +1,7 @@
+"""
+Napisz program wczytujący liczbę naturalną z klawiatury i odpowiadający na pytanie,
+czy liczba ta zawiera cyfrę równą liczbie swoich cyfr.
+"""
 number = int(input("Enter a number: "))
 strnumber = str(number)
 i = 0

@@ -1,3 +1,9 @@
+"""
+Napisać program znajdujący wszystkie liczby N-cyfrowe dla których suma N-tych potęg cyfr
+liczby jest równa tej liczbie, np. 153 = 1**3 + 5**3 + 3**3 .
+"""
+
+
 def mathematical_power(number):
     while number > 0:
         a = number
@@ -11,8 +17,8 @@ def mathematical_power(number):
         x = power
         while a > 0:
             c = a % 10
-            a = a//10
-            number_check += c**x
+            a = a // 10
+            number_check += c ** x
         if number_check == number:
             print(number)
         number -= 1
