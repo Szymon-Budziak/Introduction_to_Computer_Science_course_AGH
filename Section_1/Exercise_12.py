@@ -1,3 +1,8 @@
+"""
+Napisać program wyznaczający największy wspólny dzielnik 3 zadanych liczb.
+"""
+
+
 def GCD(number1, number2):
     while number2 != 0:
         c = number1 % number2

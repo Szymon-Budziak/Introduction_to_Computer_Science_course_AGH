@@ -1,3 +1,6 @@
+"""
+Proszę napisać program wyznaczający pierwiastek kwadratowy ze wzoru Newtona.
+"""
 # 1ST SOLUTION
 """
 n = int(input("Enter n: "))

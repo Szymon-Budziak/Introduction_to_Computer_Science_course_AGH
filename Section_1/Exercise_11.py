@@ -1,3 +1,6 @@
+"""
+Napisać program wyszukujący liczby zaprzyjaźnione mniejsze od miliona.
+"""
 number = 1
 result1 = 0
 result2 = 0

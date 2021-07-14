@@ -1,3 +1,6 @@
+"""
+Proszę napisać program sprawdzający czy istnieje spójny podciąg ciągu Fibonacciego o zadanej sumie.
+"""
 number = int(input("Enter sum to check: "))
 a1 = 0
 b1 = 1

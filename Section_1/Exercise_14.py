@@ -1,3 +1,6 @@
+"""
+Napisać program obliczający wartości cos(x) z rozwinięcia w szereg Maclaurina.
+"""
 x = float(input("Enter x: "))
 eps = 0.001
 total_result = 0

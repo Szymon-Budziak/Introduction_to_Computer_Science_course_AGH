@@ -1,3 +1,7 @@
+"""
+Proszę znaleźć wyrazy początkowe zamiast 1,1 o najmniejszej sumie, aby w ciągu analogicznym
+do ciągu Fibonacciego wystąpił wyraz równy numerowi bieżącego roku.
+"""
 from math import inf
 
 min_sum = inf

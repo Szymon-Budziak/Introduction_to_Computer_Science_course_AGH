@@ -1,3 +1,6 @@
+"""
+Proszę napisać program rozwiązujący równanie x**x = 2020 metodą bisekcji.
+"""
 epsilon = 0.000001
 number = 2020
 a = 0

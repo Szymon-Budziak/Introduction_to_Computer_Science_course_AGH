@@ -1,3 +1,6 @@
+"""
+Napisać program wyszukujący liczby doskonałe mniejsze od miliona.
+"""
 number = 1000
 result = 0
 while number > 1:

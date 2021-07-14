@@ -1,3 +1,8 @@
+"""
+Napisać program wyznaczający najmniejszą wspólną wielokrotność 3 zadanych liczb.
+"""
+
+
 def GCD(a, b):
     while b != 0:
         c = a % b

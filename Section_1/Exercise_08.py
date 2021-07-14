@@ -1,3 +1,6 @@
+"""
+Napisać program sprawdzający czy zadana liczba jest pierwsza.
+"""
 from math import sqrt
 
 
