@@ -11,7 +11,7 @@ while b1 <= b2 and amount >= 0:
     elif amount < number:
         amount += b2
         b2 += a2
-        a2 = b2-a2
+        a2 = b2 - a2
     elif amount > number:
         amount -= b1
         b1 += a1

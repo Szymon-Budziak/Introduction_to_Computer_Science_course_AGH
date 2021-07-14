@@ -25,9 +25,9 @@ epsilon = 0.0000000001
 def element(P):
     a = 1
     b = P
-    while abs(a-b) >= epsilon:
-        a = (a+b)/2
-        b = P/a
+    while abs(a - b) >= epsilon:
+        a = (a + b) / 2
+        b = P / a
     return a
 
 

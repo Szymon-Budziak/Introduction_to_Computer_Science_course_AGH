@@ -2,7 +2,7 @@ def Fibonacci(a, b):
     while a < 1000:
         a = a + b
         b = a + b
-    quotient = a/b
+    quotient = a / b
     return quotient
 
 

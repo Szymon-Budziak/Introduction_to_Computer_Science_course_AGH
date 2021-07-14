@@ -10,7 +10,7 @@ while starting_number < 20:
     for i in range(2, 50):
         if i % 2 == 0:
             result1 = result1 * i
-            total_result = a * ((1/result1)*(x**n)) + total_result
+            total_result = a * ((1 / result1) * (x ** n)) + total_result
             a = (a) * (a)
             i += 1
             n += 2
