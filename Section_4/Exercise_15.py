@@ -1,5 +1,10 @@
+"""
+Dana jest tablica T[N][N], wypełniona liczbami naturalnymi. Proszę napisać funkcję, która odpowiada
+na pytanie, czy w tablicy istnieje wiersz, w którym każda liczba zawiera co najmniej jedną cyfrę
+będącą liczbą pierwszą?
+"""
 from random import randint
-from math import sqrt, log10
+from math import sqrt
 
 
 def prime_number(a):
@@ -19,27 +24,23 @@ def prime_number(a):
         return True
 
 
-def complex_number(array):
-    row_count = 0
-    main_count = 0
+def prime_numbers_in_row(array):
     for i in range(len(array)):
-        row_count += 1
-        for j in range(len(array)):
-            digits = int(log10(array[i][j]) + 1)
+        number_count = 0
+        count = 0
+        for j in range(N):
             number = str(array[i][j])
-            count = 0
+            number_count += 1
             for x in number:
                 x_number = int(x)
                 if prime_number(x_number):
                     count += 1
-            if count == digits:
-                main_count += 1
-                break
-    if row_count == main_count:
-        return True
+                    break
+        if count == number_count:
+            return True
     return False
 
 
 N = 3
-array = [[randint(20, 30) for _ in range(N)] for _ in range(N)]
-print(complex_number(array))
+array = [[randint(2, 20) for _ in range(N)] for _ in range(N)]
+print(prime_numbers_in_row(array))

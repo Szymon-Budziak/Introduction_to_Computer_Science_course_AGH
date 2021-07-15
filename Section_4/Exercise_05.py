@@ -1,3 +1,6 @@
+"""
+Poprzednie zadanie z tablicą wypełnioną liczbami całkowitymi.
+"""
 from random import randint
 
 
@@ -13,7 +16,7 @@ def integers_sum_quotient(array):
             if array[x][j] == 0:
                 continue
             else:
-                maxNumber = count/array[x][j]
+                maxNumber = count / array[x][j]
                 if maxNumber > maximum:
                     maximum = maxNumber
                     column = x
