@@ -1,3 +1,7 @@
+"""
+Napisać funkcję, która dla N-elementowej tablicy t wypełnionej liczbami naturalnym wyznacza
+długość najdłuższego, spójnego podciągu geometrycznego.
+"""
 from random import randint
 
 
@@ -18,9 +22,12 @@ def find_the_longest_conseq_subseq():
     for element in t:
         summary += 1
     for i in range(summary):
-        if i > 0 and t[i] == t[i-1] + 1:
+        if i > 0 and t[i] == t[i - 1] + 1:
             count += 1
         else:
             count = 1
         ans = max(ans, count)
     return ans
+
+
+print(find_the_longest_conseq_subseq())

@@ -1,3 +1,6 @@
+"""
+Napisać funkcję zamieniającą i wypisującą liczbę naturalną na system o podstawie 2-16.
+"""
 from math import log
 from math import ceil
 
@@ -37,7 +40,7 @@ def recursion_base_converter(number, base):
     if number == 0:
         return
     result = number % base
-    recursion_base_converter(number//base, base)
+    recursion_base_converter(number // base, base)
     if result > 9:
-        result = chr(ord('A') + result-10)
+        result = chr(ord('A') + result - 10)
     print(result)

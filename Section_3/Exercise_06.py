@@ -1,5 +1,8 @@
+"""
+Napisać program wypełniający N-elementową tablicę t liczbami naturalnymi 1-1000 i sprawdzający
+czy każdy element tablicy zawiera co najmniej jedną cyfrę nieparzystą.
+"""
 from random import randint
-
 
 t = list()
 N = 1000

@@ -1,3 +1,8 @@
+"""
+Mamy zdefiniowaną n-elementową tablicę liczb całkowitych. Proszę napisać funkcję zwracającą wartość
+typu bool oznaczającą, czy w tablicy istnieje dokładnie jeden element najmniejszy i dokładnie jeden
+element największy (liczba elementów najmniejszych oznacza liczbę takich elementów o tej samej wartości).
+"""
 from random import randint
 
 
@@ -5,8 +10,8 @@ def only_one_max_min_element(t, x):
     len_t = len(t)
     result1 = 0
     result2 = 0
-    minimum_value = x+1
-    maximum_value = -x-1
+    minimum_value = x + 1
+    maximum_value = -x - 1
     for i in range(len_t):
         if t[i] <= minimum_value:
             if t[i] == minimum_value:

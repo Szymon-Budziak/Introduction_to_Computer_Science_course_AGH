@@ -1,0 +1,28 @@
+"""
+Dana jest N-elementowa tablica t jest wypełniona liczbami naturalnymi. Proszę napisać funkcję,
+która zwraca długość najdłuższego spójnego podciągu będącego palindromem złożonym wyłącznie
+z liczb nieparzystych. Do funkcji należy przekazać tablicę, funkcja powinna zwrócić długość
+znalezionego podciągu lub wartość 0 jeżeli taki podciąg nie istnieje.
+"""
+
+
+def find_the_longest_palindrom(t):
+    len_t = len(t)
+    max_len = 0
+    for p in range(len_t):
+        if t[p] % 2 == 1:
+            for k in range(len_t - 1, p - 1, -1):
+                cp = p
+                ck = k
+                while cp < ck:
+                    if t[cp] != t[ck] or t[cp] % 2 == 0:
+                        break
+                    cp += 1
+                    ck -= 1
+                if not (cp < ck):
+                    max_len = max(max_len, k - p + 1)
+    return max_len
+
+
+t = [1, 3, 3, 1, 4, 8]
+print(find_the_longest_palindrom(t))

@@ -1,16 +1,22 @@
+"""
+Napisać funkcję, która dla N-elementowej tablicy t wypełnionej liczbami naturalnym wyznacza
+długość najdłuższego, spójnego podciągu arytmetycznego.
+"""
+
+
 def find_the_longest_arithmetic_progression(t):
     max_len = 0
     len_t = len(t)
 
     for p in range(len_t):
-        for k in range(1, len_t-p):
+        for k in range(1, len_t - p):
             result = 1
-            r = t[p+k] - t[p]
+            r = t[p + k] - t[p]
             cp = p
             ck = k
             while True:
                 try:
-                    if t[cp+ck] != t[cp] + r:
+                    if t[cp + ck] != t[cp] + r:
                         break
                     cp = cp + ck
                     result += 1
