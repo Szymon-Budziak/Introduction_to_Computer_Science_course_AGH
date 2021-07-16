@@ -1,3 +1,9 @@
+"""
+Dany jest ciąg zer i jedynek zapisany w tablicy T[N]. Proszę napisać funkcję, która odpowiada
+na pytanie czy jest możliwe pocięcie ciągu na kawałki z których każdy reprezentuje liczbę pierwszą.
+Długość każdego z kawałków nie może przekraczać 30. Na przykład dla ciągu 111011 jest to możliwe,
+a dla ciągu 110100 nie jest możliwe.
+"""
 from math import sqrt
 
 
@@ -31,7 +37,7 @@ def convert_to_decimal(binary_number):
     i = 0
     while binary_number != 0:
         decimal = binary_number % 10
-        decimal_number += decimal*pow(2, i)
+        decimal_number += decimal * pow(2, i)
         binary_number //= 10
         i += 1
     return decimal_number
@@ -39,7 +45,7 @@ def convert_to_decimal(binary_number):
 
 def binary_sequence(array, p=0, max_length=0, binary_number=''):
     if p == len(array) and max_length < 30:
-        exit("True")
+        return True
     for i in range(p, len(array)):
         binary_number += str(array[i])
         int_binary_number = int(binary_number)
@@ -48,7 +54,7 @@ def binary_sequence(array, p=0, max_length=0, binary_number=''):
             length = len(binary_number)
             if length > max_length:
                 max_length = length
-            binary_sequence(array, i+1, max_length)
+            return binary_sequence(array, i + 1, max_length)
     return False
 
 
