@@ -28,30 +28,23 @@ def prime_number(a):
 def length(number):
     count = 0
     while number > 0:
-        number //= 10
         count += 1
+        number //= 10
     return count
 
 
-def create_number(number_1, number_2, idx):
-    length_1 = length(number_1)
-    length_2 = length(number_2)
-    new_number = (number_2 // (10 ** (length_2 - idx))) * 10 ** length_1 + number_1
-    new_number *= 10 ** (length_2 - idx)
-    new_number += number_2 % (10 ** (length_2 - idx))
-    return new_number
-
-
-def number_of_created_numbers(number_1, number_2):
+def number_of_created_numbers(num_1, num_2, rest=0):
     count = 0
-    for i in range(length(number_1)):
-        actual_number = create_number(number_2, number_1, i)
-        if prime_number(actual_number):
-            count += 1
-    for i in range(length(number_2)):
-        actual_number = create_number(number_1, number_2, i)
-        if prime_number(actual_number):
-            count += 1
+    if num_1 == 0 and num_2 == 0 and prime_number(rest):
+        count += 1
+    if num_1 > 0:
+        num_1_len = length(num_1)
+        num_1_pow = 10 ** (num_1_len - 1)
+        count += number_of_created_numbers(num_1 % num_1_pow, num_2, rest * 10 + num_1 // num_1_pow)
+    if num_2 > 0:
+        num_2_len = length(num_2)
+        num_2_pow = 10 ** (num_2_len - 1)
+        count += number_of_created_numbers(num_1, num_2 % num_2_pow, rest * 10 + num_2 // num_2_pow)
     return count
 
 
