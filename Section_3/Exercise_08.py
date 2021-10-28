@@ -7,27 +7,20 @@ from random import randint
 
 
 def crossing_check(N):
-    t = [randint(1, 30) for _ in range(N)]
-    print(t)
-    for i in range(len(t) - 1):
-        aliquot = 2
-        copy = t[i]
-        count = i
-        while copy > 1:
-            if copy % aliquot == 0:
-                if copy == t[-1]:
-                    return True, t[i]
-                elif copy != t[-1]:
-                    try:
-                        copy = t[count + aliquot]
-                        count += aliquot
-                        aliquot = 2
-                    except IndexError:
-                        break
-            elif copy % aliquot != 0:
-                aliquot += 1
-                continue
-    return False
+    T = [randint(1, 30) for _ in range(N)]
+    print(T)
+    visited = [False] * len(T)
+    visited[0] = True
+    for i in range(len(T)):
+        if visited[i]:
+            divisor = 2
+            while T[i] > 1:
+                while T[i] % divisor == 0:
+                    if i + divisor < len(T):
+                        visited[i + divisor] = True
+                    T[i] //= divisor
+                divisor += 1
+    return visited[-1]
 
 
 print(crossing_check(30))
