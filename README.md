@@ -1,5 +1,5 @@
-# WDI exercises solutions
-This is the repository with solutions from WDI (Wstęp do Informatyki - Introduction to Computer Science) exercises at AGH. Here I will share all of the codes written by me and codes written during exercises. All codes are written in English but the content of the exercises are written in Polish. Also all codes are written according to the PEP 8 style.
+# Introduction to Computer Science course at AGH UST
+The repository with solutions from Introduction to Computer Science (Wstęp do Informatyki - WDI) lab classes at AGH UST. Here I will share all of the codes written by me and codes written during laboratories. All codes are written in English but the content of the exercises are written in Polish. Also all codes are written according to the PEP 8 style.
 ## Table of contents
 Table of contents consists of specific sections in repository. Each section consists of the content of the exercises and the solved exercises.
 1. [Section 1](https://github.com/Szymon-Budziak/Introduction_to_Computer_Science_course_AGH/tree/master/Section_1)
